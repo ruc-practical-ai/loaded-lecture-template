@@ -72,8 +72,8 @@ To view HTML pages directly in a browser, simply navigate to the pages of intere
 To install locally, first install the required dependencies (Poetry and TexLive), then clone the repository and navigate to its directory.
 
 ```bash
-git clone https://github.com/ruc-practical-ai/fall-2024-class-01.git
-cd fall-2024-class-01
+git clone https://github.com/ruc-practical-ai/loaded-lecture-template.git
+cd loaded-lecture-template
 ```
 
 Configure Poetry to install its virtual environment inside the repository directory.
