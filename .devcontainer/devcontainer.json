@@ -6,6 +6,7 @@
     "waitFor": "onCreateCommand",
     "updateContentCommand": "",
     "postCreateCommand": "bash .devcontainer/configure_environment.sh",
+    "postAttachCommand": "bash .devcontainer/post_attach.sh",
     "customizations": {
         "codespaces": {
             "openFiles": []
