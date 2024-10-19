@@ -8,10 +8,12 @@ else
 fi
 
 echo ""
-echo "Sourcing .bash_profile..."
-source /home/developer/.bash_profile
+echo "Adding poetry to path..."
+poetry_path="/home/developer/.local/bin"
+if [ -d "$poetry_path" ] && [[ ":$PATH:" != *":$poetry_path:"* ]]; then
+    PATH="${PATH:+"$PATH:"}$poetry_path"
+fi
 
-echo ""
 echo "Checking poetry version..."
 echo "Using poetry version:"
 poetry --version

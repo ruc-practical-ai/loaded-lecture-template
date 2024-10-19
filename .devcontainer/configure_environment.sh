@@ -107,14 +107,15 @@ add_aliases() {
     touch $developer_home/.bashrc
     file_name=$(basename "$1")
     curl -o "$developer_home/$file_name" $1
-    echo "source ~/$file_name" >> $developer_home/.bashrc
+    echo "source $developer_home/$file_name" >> "$developer_home/.bashrc"
 }
 
 add_aliases $command_line_aliases_file
 add_aliases $git_aliases_file
 add_aliases $poetry_aliases_file
 
-echo 'source ~/.bashrc' >> $developer_home/.bash_profile
+echo "source $developer_home/.bashrc" >> "$developer_home/.bash_profile"
+echo "source $developer_home/.bashrc" >> "$developer_home/.profile"
 
 # ===================
 # Poetry installation
